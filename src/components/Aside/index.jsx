@@ -11,7 +11,7 @@ const Side = styled.aside`
     justify-content: space-around;
     align-items: center;
     height: 100px;
-    max-width: 848px;
+    max-width: 680px;
     position: relative;
     top: -102px;
     transform-origin: bottom left;
@@ -35,7 +35,6 @@ const Side = styled.aside`
 
 const Nav = styled.nav`
 display:flex;
-justify-content: flex-start;
 `
 
 function Aside() {

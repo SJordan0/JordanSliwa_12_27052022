@@ -7,7 +7,7 @@ background-color: #020203;
 display: flex;
 justify-content: center;
 padding: 10px 0;
-height: 91px;
+height: 100px;
 `
 
 const Nav = styled.nav`
