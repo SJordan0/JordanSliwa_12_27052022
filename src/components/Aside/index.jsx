@@ -1,9 +1,9 @@
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
-import logo1 from '../../assets/méditation.png'
-import logo2 from '../../assets/nage.png'
-import logo3 from '../../assets/vélo.png'
-import logo4 from '../../assets/haltère.png'
+import yoga from '../../assets/yoga.svg'
+import nage from '../../assets/nage.svg'
+import velo from '../../assets/vélo.svg'
+import haltere from '../../assets/haltère.svg'
 
 const Side = styled.aside`
     background-color: #020203;
@@ -33,27 +33,23 @@ const Side = styled.aside`
     }
 `
 
-const Nav = styled.nav`
-display:flex;
-`
-
 function Aside() {
     return (
     <Side>
-        <Nav>   
+        <nav>   
             <Link to="/">
-                <img src={logo1} alt="méditation" />
+                <img src={yoga} alt="yoga" />
             </Link>
             <Link to="/">
-                <img src={logo2} alt="natation" />
+                <img src={nage} alt="natation" />
             </Link>
             <Link to="/">
-                <img src={logo3} alt="vélo" />
+                <img src={velo} alt="vélo" />
             </Link>
             <Link to="/">
-                <img src={logo4} alt="haltère" />
+                <img src={haltere} alt="haltère" />
             </Link>
-        </Nav>
+        </nav>
         <p>Copyright, SportSee 2020</p>
     </Side>
     )

@@ -1,4 +1,4 @@
-import logo from '../../assets/logo.png'
+import logo from '../../assets/logo.svg'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 
@@ -30,7 +30,7 @@ return (
         <Nav>
             <img src={logo} alt="logo" />
             <Link to="/" >Accueil</Link>
-            <Link to="/">Profil</Link>
+            <Link to="/ProfilPage">Profil</Link>
             <Link to="/">Réglage</Link>
             <Link to="/">Communauté</Link>
         </Nav>

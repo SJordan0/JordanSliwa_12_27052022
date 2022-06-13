@@ -5,6 +5,7 @@ import GlobalStyle from './utils/style/GlobalStyle'
 import Header from './components/Header';
 import Aside from './components/Aside';
 import Home from './Pages/Home';
+import ProfilPage from './Pages/UserPage';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -16,6 +17,7 @@ root.render(
       <Aside />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/ProfilPage" element={<ProfilPage />} />
       </Routes>
     </Router>
   </React.StrictMode>
