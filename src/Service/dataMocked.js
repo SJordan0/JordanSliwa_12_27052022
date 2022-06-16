@@ -6,7 +6,7 @@ export const USER_MAIN_DATA = [
             lastName: 'Dovineau',
             age: 31,
         },
-        todayScore: 0.12,
+        todayScore: 80,
         keyData: {
             calorieCount: 1930,
             proteinCount: 155,

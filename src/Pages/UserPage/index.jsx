@@ -14,21 +14,23 @@ import '../../Service/dataMocked'
 import { USER_ACTIVITY, USER_MAIN_DATA, USER_AVERAGE_SESSIONS, USER_PERFORMANCE } from '../../Service/dataMocked';
 
 const Main = styled.main`
-    margin-left: 100px;
+    margin-left: 125px;
+    margin-top: 15px;
     position: relative;
     top: -100px;
-    height: 580px;
+    height: 565px;
 `
 
 const Dashboards = styled.div`
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 `
 
 const Activity = styled.div`
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
+    width: 75%;
 `
 
 const Daily = styled.div`
@@ -84,6 +86,10 @@ const Stat = styled.div`
         margin-left: 20px;
     }
 
+    h2{
+        margin-left: 20px;
+    }
+
     img{
         margin-left: 20px;
     }
@@ -100,17 +106,12 @@ function ProfilPage() {
             <Activity>
                 <Daily>
                     <p>Activité quotidienne</p>
-                    <ResponsiveContainer width={700} height={300}>
+                    <ResponsiveContainer width="92%" height={300}>
                             <BarChart
-                            width={500}
+                            width="92%"
                             height={300}
                             data={USER_ACTIVITY[0].sessions}
-                            margin={{
-                                top: 0,
-                                right: 0,
-                                left: 0,
-                                bottom: 0,
-                            }}
+                            margin={0}
                             >
                             <CartesianGrid strokeDasharray="3 3" />
                             <XAxis dataKey="day" />
@@ -131,7 +132,7 @@ function ProfilPage() {
                 </Daily>
                 <Duration>
                     <p>Durée</p>
-                    <ResponsiveContainer width="100%" height="100%">
+                    <ResponsiveContainer width="100%" height={240}>
                         <LineChart width={300} height={100} data={USER_AVERAGE_SESSIONS[0].sessions}>
                         <Line type="monotone" dataKey="sessionLength" stroke="#8884d8" strokeWidth={2} />
                         </LineChart>
@@ -164,6 +165,7 @@ function ProfilPage() {
                             endAngle={90}
                             fill="red"
                         >
+                            {console.log(USER_MAIN_DATA[0].todayScore)}
                             <RadialBar dataKey="todayScore" cornerRadius={10} />
                             <circle cx="50%" cy="50%" fill="white" r="0"></circle>
                         </RadialBarChart>
