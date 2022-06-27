@@ -1,6 +1,5 @@
 import styled from "styled-components"
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
-import {USER_ACTIVITY} from '../../Service/dataMocked'
 
 const Daily = styled.div`
     width: 100%;
@@ -17,19 +16,19 @@ const Daily = styled.div`
         display: flex;
         justify-content: flex-end;
         position: relative;
-        top: -315px;
+        bottom: 295px;
     }
 `
 
-function DailyActivity() {
+function DailyActivity({userDaily}) {
     return(
         <Daily>
             <p>Activité quotidienne</p>
-            <ResponsiveContainer width="100%" height={300}>
+            <ResponsiveContainer width="100%" height={280}>
                     <BarChart
                     width="92%"
                     height={300}
-                    data={USER_ACTIVITY[0].sessions}
+                    data={userDaily}
                     margin={{left: 15}}
                     >
                     <CartesianGrid strokeDasharray="3 3" />
