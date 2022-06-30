@@ -11,12 +11,11 @@ const Side = styled.aside`
     justify-content: space-around;
     align-items: center;
     height: 100px;
-    max-width: 680px;
-    position: relative;
-    top: -102px;
+    width: 680px;
+    position: absolute;
+    top: 0px;
     transform-origin: bottom left;
     transform: rotate(90deg);
-    
     p {
         color: white;
         transform: rotate(180deg);

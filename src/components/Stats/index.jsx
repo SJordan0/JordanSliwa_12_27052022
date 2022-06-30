@@ -3,7 +3,6 @@ import calories from '../../assets/calories.svg'
 import proteines from '../../assets/proteines.svg'
 import glucides from '../../assets/glucides.svg' 
 import lipides from '../../assets/lipides.svg'
-import { USER_MAIN_DATA } from "../../Service/dataMocked"
 
 const StatsList = styled.div`
     display: flex;
@@ -19,11 +18,14 @@ const Stat = styled.div`
     height: 21%;
     display: flex;
     align-items: center;
-    justify-content: center;
-    
+
     p{
         font-size: 14px;
         color: #74798C;
+    }
+
+    img{
+        margin-left: 20px;
     }
 
     h2{
@@ -36,34 +38,34 @@ const StatText = styled.div`
     margin-left: 15px;
 `
 
-function Stats() {
+function Stats({userStats}) {
     return(
         <StatsList>
             <Stat>
                 <img src={calories} alt=''/>
                 <StatText>
-                    <h2>{USER_MAIN_DATA[0].keyData.calorieCount}Kcal</h2>
+                    <h2>{userStats.calorieCount}Kcal</h2>
                     <p>Calories</p>         
                 </StatText>
             </Stat>
             <Stat>
                 <img src={proteines} alt=''/>
                 <StatText>
-                    <h2>{USER_MAIN_DATA[0].keyData.proteinCount}g</h2>
+                    <h2>{userStats.proteinCount}g</h2>
                     <p>Proteines</p>
                 </StatText>
             </Stat>
             <Stat>
                 <img src={glucides} alt=''/>
                 <StatText>
-                    <h2>{USER_MAIN_DATA[0].keyData.carbohydrateCount}g</h2>
+                    <h2>{userStats.carbohydrateCount}g</h2>
                     <p>Glucides</p>
                 </StatText>
             </Stat>
             <Stat>
                 <img src={lipides} alt=''/>
                 <StatText>
-                    <h2>{USER_MAIN_DATA[0].keyData.lipidCount}g</h2>
+                    <h2>{userStats.lipidCount}g</h2>
                     <p>Lipides</p>
                 </StatText>
             </Stat>

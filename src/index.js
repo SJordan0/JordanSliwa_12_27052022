@@ -17,7 +17,7 @@ root.render(
       <Aside />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/ProfilPage" element={<ProfilPage />} />
+        <Route path="/ProfilPage/:userId" element={<ProfilPage />} />
       </Routes>
     </Router>
   </React.StrictMode>
