@@ -1,30 +1,29 @@
 import styled from "styled-components"
-<<<<<<< Updated upstream
-import { USER_AVERAGE_SESSIONS } from "../../Service/dataMocked"
-import { LineChart, Line, ResponsiveContainer } from 'recharts';
-=======
 import { LineChart, Line, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
 import { renameAverage } from "../../models";
 import PropTypes from 'prop-types'; 
->>>>>>> Stashed changes
+
 
 const Duration = styled.div`
     width: 32%;
-    height: 263px;
+    height: 217px;
     background: #FF0000;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0212249);
     border-radius: 5px;
+    position: relative;
+    p {
+        color: white;
+        opacity: 0.5;
+        font-size: 15px;
+        position: absolute;
+        left: 10%;
+        top: 10%;
+        width: 70%;
+      }
 `
 
-<<<<<<< Updated upstream
-function DurationActivity(){
-    return(
-        <Duration>
-            <p>Durée</p>
-            <ResponsiveContainer width="100%" height={240}>
-                <LineChart width={300} height={100} data={USER_AVERAGE_SESSIONS[0].sessions}>
-                <Line type="monotone" dataKey="sessionLength" stroke="#8884d8" strokeWidth={2} />
-=======
+
+
 /**
  * Duration activity component, display the duration of activity of the user
  * @prop {array} userDuration duration of activity data
@@ -65,7 +64,6 @@ function DurationActivity({userDuration}){
                     domain={['dataMin -15', 'dataMax + 45']}
                 />
                 <Line type="natural" dataKey="sessionLength" name="Durée (min)" stroke="white" dot={false} strokeWidth={2}  />
->>>>>>> Stashed changes
                 </LineChart>
             </ResponsiveContainer>
         </Duration>

@@ -30,7 +30,7 @@ return (
         <Nav>
             <img src={logo} alt="logo" />
             <Link to="/" >Accueil</Link>
-            <Link to="/ProfilPage">Profil</Link>
+            <Link to="/">Profil</Link>
             <Link to="/">Réglage</Link>
             <Link to="/">Communauté</Link>
         </Nav>

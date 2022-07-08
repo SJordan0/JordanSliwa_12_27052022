@@ -1,31 +1,27 @@
 import styled from 'styled-components'
-<<<<<<< Updated upstream
-import React from 'react';
-
-import { USER_MAIN_DATA } from '../../Service/dataMocked';
-=======
 import { useParams } from 'react-router-dom'
->>>>>>> Stashed changes
 import DailyActivity from '../../components/DailyActivity';
 import DurationActivity from '../../components/DurationActivity';
 import Chart from '../../components/Chart';
 import Score from '../../components/Score';
 import Stats from '../../components/Stats';
-<<<<<<< Updated upstream
-=======
 import React, { useEffect, useState } from "react"
 import { userDataModel, activityDataModel, averageDataModel, performanceDataModel } from "../../models";
 import { USER_ACTIVITY, USER_AVERAGE_SESSIONS, USER_MAIN_DATA, USER_PERFORMANCE } from '../../Service/dataMocked';
 import { dataMocked } from '../../Service/config';
->>>>>>> Stashed changes
 
 const Main = styled.main`
     margin-left: 125px;
-    margin-top: 15px;
+    margin-top: 10px;
     margin-right: 15px;
     position: relative;
-    top: -100px;
-    height: 565px;
+`
+
+const User = styled.div`
+    padding-bottom: 20px;
+    span{
+        color:red;
+    }
 `
 
 const Dashboards = styled.div`
@@ -39,32 +35,6 @@ const Activity = styled.div`
     justify-content: space-between;
     width: 75%;
 `
-
-<<<<<<< Updated upstream
-
-
-function ProfilPage() {
-  return (
-    <Main>
-        <div>
-            <h1>Bonjour {USER_MAIN_DATA[0].userInfos.firstName}</h1>
-            <h2>Félicitation ! Vous avez explosé vos objectifs hier 👏</h2>
-        </div>
-        <Dashboards>
-            <Activity>
-                <DailyActivity />
-                <DurationActivity />
-                <Chart />
-                <Score />
-            </Activity>
-            <Stats />
-        </Dashboards>
-    </Main>
-  );
-}
-
-export default ProfilPage;
-=======
 
 export default function ProfilPage() {
   const {userId} = useParams();
@@ -173,4 +143,3 @@ export default function ProfilPage() {
     </Main>
   );  
 }
->>>>>>> Stashed changes

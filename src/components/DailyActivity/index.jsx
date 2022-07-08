@@ -1,11 +1,6 @@
 import styled from "styled-components"
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
-<<<<<<< Updated upstream
-import {USER_ACTIVITY} from '../../Service/dataMocked'
-=======
 import PropTypes from 'prop-types'; 
-import React from "react";
->>>>>>> Stashed changes
 
 const Daily = styled.div`
     width: 100%;
@@ -13,22 +8,19 @@ const Daily = styled.div`
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0212249);
     border-radius: 5px;
     margin-bottom: 30px;
-
     p{
         padding: 15px;
     }
-
     .recharts-default-legend{
         display: flex;
         justify-content: flex-end;
         position: relative;
-        top: -315px;
+        bottom: 295px;
     }
 `
 
-<<<<<<< Updated upstream
-function DailyActivity() {
-=======
+
+
 /** 
  * Daily activity component, display daily activity of the user
  * @prop {array} userDaily daily activity data
@@ -36,15 +28,14 @@ function DailyActivity() {
  */
 
 function DailyActivity({userDaily}) {
->>>>>>> Stashed changes
     return(
         <Daily>
             <p>Activité quotidienne</p>
-            <ResponsiveContainer width="100%" height={300}>
+            <ResponsiveContainer width="92%" height={280}>
                     <BarChart
                     width="92%"
                     height={300}
-                    data={USER_ACTIVITY[0].sessions}
+                    data={userDaily}
                     margin={{left: 15}}
                     >
                     <CartesianGrid strokeDasharray="3 3" />
