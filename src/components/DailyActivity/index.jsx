@@ -1,6 +1,11 @@
 import styled from "styled-components"
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+<<<<<<< Updated upstream
 import {USER_ACTIVITY} from '../../Service/dataMocked'
+=======
+import PropTypes from 'prop-types'; 
+import React from "react";
+>>>>>>> Stashed changes
 
 const Daily = styled.div`
     width: 100%;
@@ -21,7 +26,17 @@ const Daily = styled.div`
     }
 `
 
+<<<<<<< Updated upstream
 function DailyActivity() {
+=======
+/** 
+ * Daily activity component, display daily activity of the user
+ * @prop {array} userDaily daily activity data
+ * @returns {React.ReactComponentElement}
+ */
+
+function DailyActivity({userDaily}) {
+>>>>>>> Stashed changes
     return(
         <Daily>
             <p>Activité quotidienne</p>
@@ -53,3 +68,7 @@ function DailyActivity() {
 }
 
 export default DailyActivity
+
+DailyActivity.propTypes = {
+    userDaily: PropTypes.array,
+  }
